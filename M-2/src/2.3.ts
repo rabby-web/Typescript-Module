@@ -1,5 +1,5 @@
 {
-    // generic type
+    //generic type 
     // type GenericArray = Array<boolean>
     type GenericArray<T> = Array<T>
 
