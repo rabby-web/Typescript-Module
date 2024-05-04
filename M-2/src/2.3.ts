@@ -1,38 +1,34 @@
 {
-    //generic type 
-    // type GenericArray = Array<boolean>
-    type GenericArray<T> = Array<T>
+  //generic type
+  // type GenericArray = Array<boolean>
+  type GenericArray<T> = Array<T>;
 
+  // const rollNumber : number[] = [1, 2, 3];
+  const rollNumber: Array<number> = [1, 2, 3];
 
-    // const rollNumber : number[] = [1, 2, 3];
-    const rollNumber : Array<number> = [1, 2, 3];    
+  // const mentors: string[] = ["X", "Y", "Z"]
+  const mentors: Array<string> = ["X", "Y", "Z"];
 
+  // const boolArray : boolean[] = [true, false, true]
+  const boolArray: GenericArray<boolean> = [true, false, true];
 
-    // const mentors: string[] = ["X", "Y", "Z"]
-    const mentors: Array<string> = ["X", "Y", "Z"]
+  type User = {
+    name: string;
+    age: number;
+  };
 
-    // const boolArray : boolean[] = [true, false, true]
-    const boolArray : GenericArray<boolean> = [true, false, true]
+  const user: GenericArray<User> = [
+    {
+      name: "Rabby",
+      age: 100,
+    },
+    {
+      name: "Rahim",
+      age: 100,
+    },
+  ];
 
-        type User = {
-            name: string;
-            age: number
-        }
-
-    const user : GenericArray<User> = [
-        {
-            name: "Rabby",
-            age: 100
-        },
-        {
-            name: "Rahim",
-            age: 100
-        }
-    ]
-
-    //  generic tuple
-    type GenericTuple<X,Y> = [X,Y]
-    const men : GenericTuple<string,string> = ['Bow', 'Bon']
-
-
+  //  generic tuple
+  type GenericTuple<X, Y> = [X, Y];
+  const men: GenericTuple<string, string> = ["Bow", "Bon"];
 }
