@@ -12,7 +12,30 @@
     }
   };
   const result1 = add("2", " 3");
-//   console.log(result1);
+  // console.log(result1);
+  // ==>  in guard
+  type NormalUser = {
+    name: string;
+  };
+  type AdminUser = {
+    name: string;
+    role: "admin";
+  };
+  const getUser = (user: NormalUser | AdminUser) => {
+    if ("role" in user) {
+      console.log(`My Name is ${user.name}  and my role is ${user.role}`);
+    } else {
+      console.log(`My Name is ${user.name}`);
+    }
+  };
 
+  const normalUser: NormalUser = {
+    name: "Mr. Normal User",
+  };
+  const adminUser: AdminUser = {
+    name: "Mr. AdminUser",
+    role: "admin",
+  };
+  getUser(adminUser);
   //
 }
