@@ -1,6 +1,6 @@
 {
   // abstractions => 1. interface 2. abstract
-    // interface
+  // interface-----------
   // idea
   interface Vehicle1 {
     startEngine(): void;
@@ -8,7 +8,7 @@
     move(): void;
   }
   // real implement
-  class Car implements Vehicle1 {
+  class Car1 implements Vehicle1 {
     startEngine(): void {
       console.log(`I am start engine`);
     }
@@ -22,4 +22,29 @@
       console.log(`I am tests engine`);
     }
   }
+  // abstract------------------
+
+  //   idea
+  abstract class Car2 {
+    abstract startEngine(): void;
+    abstract stopEngine(): void;
+    abstract move(): void;
+    test() {
+      console.log(`I am tests engine`);
+    }
+  }
+
+  //   class Toyota extends Car2 {
+  //     startEngine(): void {
+  //       console.log(`I am start engine`);
+  //     }
+  //     stopEngine(): void {
+  //       console.log(`I am start engine`);
+  //     }
+  //     moveEngine(): void {
+  //       console.log(`I am start engine`);
+  //     }
+  //   }
+
+  //
 }
